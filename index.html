@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="PT-BR">
 
 <head>
   <!-- Basic -->
@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Site Metas -->
   <link rel="icon" href="images/favicon.png" type="image/gif" />
-  <meta name="keywords" content="" />
+  <meta name="keywords" content="Comercio" />
   <meta name="description" content="Reparos de Eletrodomésticos" />
   <meta name="author" content="Gustavo César" />
 
@@ -17,7 +17,7 @@
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
   <!-- fonts style -->
@@ -30,6 +30,11 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+
+  <!-- PWA Content -->
+  <!-- Manifest -->
+  <link rel="manifest" href="Manifest.json" />
+  <meta name="theme-color" content="#155263" />
 
 </head>
 
@@ -701,7 +706,9 @@
         <div class="col-md-6 col-lg-4 footer-col div_a_direita">
           <div class="map_container">
             <div class="map">
-              <div id="googleMap"></div>
+              <div id="googleMap">
+                <iframe src=""></iframe>
+              </div>
             </div>
           </div>
         </div>
@@ -730,6 +737,14 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
   <!-- End Google Map -->
+  
+  <!-- Service Worker -->
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('service-worker.js')
+  }
+  </script>
+  <!-- Service Worker -->
 
 </body>
 
